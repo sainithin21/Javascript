@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one{
+            background-color: rgb(133, 225, 133);
+            border:none;
+            border-radius: 10px;
+            padding:5px 20px;
+        }
+        #two{
+            border:2px solid black;
+            border-radius: 10px;
+            padding:3px 20px;
+        }
+    </style>
+</head>
+<body>
+    <button class="one" onclick="cartQuantity=cartQuantity+1; document.querySelector('.cart_summary').innerText=`your bag has ${cartQuantity} items`;">Add to Bag</button>
+    <button id="two" onclick="cartQuantity=cartQuantity-1; document.querySelector('.cart_summary').innerText=`your bag has ${cartQuantity} items`;">MOVE TO WISHLIST</button>
+    <button class="one" onclick="cartQuantity=cartQuantity+2; document.querySelector('.cart_summary').innerText=`your bag has ${cartQuantity} items`;">Add 1+1 sale item</button>
+    <h1 class="cart_summary"></h1>
+    <h2 id="name"></h2>
+    <script>
+        let cartQuantity = 0;
+        document.querySelector('.cart_summary').innerText =`your bag has ${cartQuantity} items`;
+       /*
+        variables practise. 
+        let a='welcome to js';
+        console.log('hello world');
+        console.log(a);
+        let bagValue=21+32-4+69-43;
+        let bagSummary=`final amt. available is: Rs.${bagValue}`;
+        console.log(bagSummary);
+        //updating variable values in JS
+        let g=200;
+        console.log(g);
+        g+=300;//g=500
+        console.log(g);
+        g*=2;//g=1000   
+        console.log(g);
+        g-=500;//g=500
+        console.log(g);
+        g++;//g=501;
+        console.log(g);
+        g--;//g=500;
+        console.log(g);*/
+
+        //practise excercise
+        const name = 'sai nithin';
+        console.log(name);
+        document.querySelector('#name').innerText=name;
+        console.log('90+125');
+        console.log(eval('90+125'));
+    </script>
+</body>
+</html>

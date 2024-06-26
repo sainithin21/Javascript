@@ -1,0 +1,17 @@
+#main{
+    align-content: center;
+}
+#outer{
+    border:1px solid rgb(109, 104, 104);
+    border-radius: 5px;
+    text-align:center;
+    width:350px;
+    length:600px;
+}
+.display{
+    margin:10px;
+    width:85%;
+}
+.nums_button{
+    margin:10px;
+}

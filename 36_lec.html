@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html_events</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    <div>
+        <ul id="images">
+            <li><img src="https://th.bing.com/th/id/OIP.j4E6Si0lROxSJ4EryUr3UgHaEz?w=258&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" id="vk"  alt=""  height="200px"></li>
+            <li><img src="https://th.bing.com/th/id/OIP.Cbwa2uSQBWD35OSDlAtlQwHaHa?w=177&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7" alt="" height="200px"></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+</body>
+<script>
+        //   document.getElementById('vk').onclick = function(){
+        //     alert("virat kohli");                                 //not a good approach
+        //   }
+        // document.getElementById('vk').addEventListener('click',function(){
+        //     alert("vk th king");
+        // })
+
+        // attachEvent();     old
+        // jQuery-on      
+        // document.getElementById('vk').addEventListener('click',function(e){
+        //     console.log(e);
+        // },false);  //false->event bubling  True->event capturing.
+
+        // type, timestamp, defaultPrevented
+        // target, toElement, srcElement, currentTarget,
+        // clientX, clientY, screenX, screenY
+        // altkey, ctrlkey, shiftkey, keyCode
+
+        // document.getElementById('images').addEventListener('click',function(e){
+        //     console.log("inside the ul");
+        // },false)
+
+        // document.getElementById('vk').addEventListener('click',function(e){
+        //      console.log("virat kohli");
+        //      e.stopPropagation()
+        // },false)
+
+        // document.getElementById('images').addEventListener('click',function(){
+        //     console.log("inside the ul");
+        // },true)
+
+        // document.getElementById('vk').addEventListener('click',function(){
+        //      console.log("virat kohli");
+        // },true)
+
+        document.getElementById('google').addEventListener('click',function(e){
+             e.preventDefault();
+             e.stopPropagation();
+             console.log('google clicked'); 
+        },false);
+
+        //excercises
+        document.querySelector('#images').addEventListener('click',function(e){
+            console.log(e.target.parentNode);
+            if(e.target.tagName==='IMG'){
+                console.log(e.target.id);
+                let removeIt = e.target.parentNode;
+                removeIt.remove();
+            }
+            
+        },false);
+  
+</script>
+</html>
